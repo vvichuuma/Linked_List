@@ -43,6 +43,27 @@ class LinkedList{
 
   }
 
+  //inserting a data at a particular index: 
+  insertAt(data , index){
+     
+     let count = 0;
+     let current = this.head;
+     let previous;  
+     let node = new Node(data);
+
+     while(count < index){
+        previous = current;
+        current = current.next 
+        count++;
+     }
+
+     console.log(previous);
+     previous.next = node;
+     node.next = current;
+     console.log(current);
+
+  }
+
  //printing all the data withing a List: 
 
   printList(){
@@ -63,5 +84,7 @@ ll.insertData(200);
 ll.insertData(300);
 ll.insertLast(400);
 ll.insertLast(900);
+ll.insertAt(270,2);
+ll.insertAt(456,4);
 ll.printList();
 //console.log(ll);
