@@ -18,8 +18,19 @@ class LinkedList{
      this.head = head; 
      this.size = size;
   }
+  
+  //Inserting a node into the linkedList: 
+  
+  insertData(data){
+      //since in head it is a form of a node. 
+     this.head = new Node(data, this.head);
+     this.size++;
+  }
+
 }
 
 const ll = new LinkedList(); 
+ll.insertData(100);
+ll.insertData(200); 
  
 console.log(ll);
