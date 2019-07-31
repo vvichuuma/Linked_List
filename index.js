@@ -10,6 +10,16 @@ class Node{
 
 }
 
-const n1 = new Node(100); 
+class LinkedList{
+    //A LinkedlIst has a list of nodes.
+    // A head and a size of the LinkedList:
+    //By default the header is gonna be null and the size of the linkedList is zero.  
+  constructor(head = null , size = 0){
+     this.head = head; 
+     this.size = size;
+  }
+}
 
-console.log(n1);
+const ll = new LinkedList(); 
+ 
+console.log(ll);
