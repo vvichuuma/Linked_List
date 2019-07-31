@@ -27,10 +27,41 @@ class LinkedList{
      this.size++;
   }
 
+  //inserting a node at the last: 
+  insertLast(data){
+      let current = this.head;
+      let nNode = new Node(data); 
+      let previous;
+
+      while(current){
+    
+       previous = current; 
+        current = current.next;
+      }
+
+     previous.next = nNode; 
+
+  }
+
+ //printing all the data withing a List: 
+
+  printList(){
+     let currentNode = this.head;  
+    
+     while(currentNode){
+
+        console.log(currentNode.data);
+        currentNode = currentNode.next;
+     }
+  }
+
 }
 
 const ll = new LinkedList(); 
 ll.insertData(100);
 ll.insertData(200); 
- 
-console.log(ll);
+ll.insertData(300);
+ll.insertLast(400);
+ll.insertLast(900);
+ll.printList();
+//console.log(ll);
