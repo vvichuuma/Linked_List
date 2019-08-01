@@ -64,6 +64,19 @@ class LinkedList{
 
   }
 
+  //Get a particular element from a List: 
+  getAtindex(index){
+     let count = 0; 
+     let current = this.head;
+     let previous;
+     while(count < index){
+        previous = current; 
+        count++;
+        current = current.next;
+     }
+     console.log(previous.next);
+  }
+
  //printing all the data withing a List: 
 
   printList(){
@@ -87,4 +100,6 @@ ll.insertLast(900);
 ll.insertAt(270,2);
 ll.insertAt(456,4);
 ll.printList();
+console.log('---'); 
+ll.getAtindex(2);
 //console.log(ll);
