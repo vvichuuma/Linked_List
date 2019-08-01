@@ -77,6 +77,26 @@ class LinkedList{
      console.log(previous.next);
   }
 
+   //remove a particluar element from the list: 
+    deleteItemList(index){
+
+        let current = this.head;
+        let count = 0; 
+        let previous;
+
+        while(count < index){
+
+            previous = current;     
+            count++;
+            current = current.next; 
+        }
+       
+        console.log(previous);
+        console.log(current);
+        previous.next = current.next;
+
+    }
+
  //printing all the data withing a List: 
 
   printList(){
@@ -102,4 +122,9 @@ ll.insertAt(456,4);
 ll.printList();
 console.log('---'); 
 ll.getAtindex(2);
+ll.getAtindex(3);
+console.log('--Code for deletion--')
+ll.deleteItemList(3);
+console.log('--- printing every Item in the List ---'); 
+ll.printList();
 //console.log(ll);
